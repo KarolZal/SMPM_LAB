@@ -207,7 +207,7 @@ void wczytywanie_IMU()
 		  HAL_I2C_Mem_Read(&hi2c2, MAG_ADDR, STATUS_REG_mag, I2C_MEMADD_SIZE_8BIT, i2c2_buf + 1, 1, 1);
 		  uint8_t tmp_stat_mag = i2c2_buf[1];
 
-		  if (tmp_stat_mag & SR_ZYXDA) // dostępne nowe dane magnetometr
+		  if (tmp_stat_mag & SR_ZYXDA) // dostępne nowe dane magnetometru
 		  {
 			  HAL_I2C_Mem_Read(&hi2c2, MAG_ADDR, OUT_X_L, I2C_MEMADD_SIZE_8BIT, i2c2_buf, 6, 1);
 
